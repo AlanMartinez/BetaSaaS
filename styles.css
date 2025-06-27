@@ -65,6 +65,42 @@ header p {
     padding: 40px 20px;
 }
 
+.subtitles {
+    background: #f0f4f8;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.subtitles input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 260px;
+}
+
+.subtitles button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    background: #4f8cff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.subtitles button:hover {
+    background: #38c6ff;
+}
+
+#subtitle-message {
+    color: #4f8cff;
+    font-size: 1rem;
+    min-height: 24px;
+}
+
 .signup h2 {
     margin-bottom: 20px;
 }
