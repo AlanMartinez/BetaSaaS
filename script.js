@@ -1,24 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('signup-form');
-    const message = document.getElementById('form-message');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = form.querySelector('input[type="email"]').value;
-        if (email) {
-            message.textContent = 'Thank you! You will be notified soon.';
-            form.reset();
-        } else {
-            message.textContent = 'Please enter a valid email address.';
-        }
-    });
-
+document.addEventListener('DOMContentLoaded', function () {
     const subtitlesBtn = document.getElementById('get-subtitles');
     const urlInput = document.getElementById('youtube-url');
     const subtitleMessage = document.getElementById('subtitle-message');
 
     if (subtitlesBtn && urlInput) {
-        subtitlesBtn.addEventListener('click', async function() {
+        subtitlesBtn.addEventListener('click', async function () {
             const url = urlInput.value.trim();
             const videoId = extractVideoId(url);
             subtitleMessage.textContent = '';
@@ -28,15 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             try {
                 const text = await fetchTranscript(videoId);
-                if (!text) {
-                    alert('No subtitles found for this video.');
-                    return;
-                }
                 downloadText(text, 'subtitles.txt');
                 subtitleMessage.textContent = 'Subtitles downloaded.';
             } catch (err) {
                 alert('Error fetching subtitles: ' + err.message);
             }
+        });
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const contactMessage = document.getElementById('contact-message');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            contactMessage.textContent = 'Thanks for reaching out! We will reply soon.';
+            contactForm.reset();
         });
     }
 });

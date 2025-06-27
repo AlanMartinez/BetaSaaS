@@ -3,60 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetaSaaS</title>
+    <title>YTText AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-b from-slate-900 via-indigo-900 to-purple-900 text-white min-h-screen flex flex-col">
-    <!-- Navbar -->
-    <header class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" class="text-2xl font-bold">BetaSaaS</a>
-        <nav class="hidden md:flex space-x-8 text-gray-300">
-            <a href="#" class="hover:text-white">Home</a>
-            <a href="#features" class="hover:text-white">Features</a>
-            <a href="#" class="hover:text-white">Pricing</a>
-            <a href="#" class="hover:text-white">Contact</a>
-        </nav>
-        <a href="#" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-md shadow">Get Started</a>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    <header class="bg-gray-950">
+        <div class="container mx-auto flex justify-between items-center p-6">
+            <a href="index.html" class="text-2xl font-bold">YTText AI</a>
+            <nav class="space-x-6 hidden md:block">
+                <a href="index.html" class="hover:text-indigo-400">Home</a>
+                <a href="features.html" class="hover:text-indigo-400">Features</a>
+                <a href="pricing.html" class="hover:text-indigo-400">Pricing</a>
+                <a href="about.html" class="hover:text-indigo-400">About</a>
+                <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="container mx-auto flex-1 px-6 py-20 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">A CRM dashboard for engineering teams</h1>
-        <p class="text-lg text-gray-300 mb-8">Manage your projects, track progress, and collaborate with ease.</p>
-        <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-md shadow">Start for free</a>
-    </section>
+    <main class="flex-1">
+        <!-- Hero -->
+        <section class="container mx-auto px-6 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Extract YouTube video subtitles instantly with AI</h1>
+            <p class="text-lg text-gray-300 mb-8">Paste a video link and download subtitles in .txt format</p>
+            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                <input id="youtube-url" type="url" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 rounded-md p-3 text-gray-900" />
+                <button id="get-subtitles" class="bg-indigo-600 hover:bg-indigo-500 rounded-md px-6 py-3">Get Subtitles</button>
+            </div>
+            <p id="subtitle-message" class="mt-4 text-indigo-400"></p>
+        </section>
 
-    <!-- Features -->
-    <section id="features" class="container mx-auto px-6 py-20 grid gap-8 md:grid-cols-3">
-        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
-            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+        <!-- Preview Features -->
+        <section class="container mx-auto px-6 py-16 grid gap-8 md:grid-cols-3 text-center">
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">AI-powered</h3>
+                <p class="text-gray-300">State of the art transcription for any video.</p>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Fast</h3>
-            <p class="text-gray-300">Lightning-fast performance for your business needs.</p>
-        </div>
-        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
-            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm-2 4c1.105 0 3 .895 3 2v1H7v-1c0-1.105 1.895-2 3-2zm8-9v2m0 4v6m0 4v.01M18 9a2 2 0 110-4 2 2 0 010 4z" />
-                </svg>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">Fast Processing</h3>
+                <p class="text-gray-300">Receive your subtitles in seconds.</p>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Secure</h3>
-            <p class="text-gray-300">Top-notch security to keep your data safe.</p>
-        </div>
-        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
-            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h10a4 4 0 004-4m-9-9v9m0 0L8.5 9M12 15l3.5-6" />
-                </svg>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">Download Ready</h3>
+                <p class="text-gray-300">Export subtitles as clean text files.</p>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Scalable</h3>
-            <p class="text-gray-300">Grow your business without limits.</p>
-        </div>
-    </section>
+        </section>
 
-    <footer class="text-center py-10 text-gray-400">&copy; 2023 BetaSaaS</footer>
+        <!-- Testimonials -->
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-center mb-8">What users say</h2>
+            <div class="grid gap-8 md:grid-cols-3">
+                <blockquote class="bg-gray-800 p-6 rounded-lg">
+                    <p class="mb-2">“YTText AI saved me hours of manual transcription.”</p>
+                    <cite class="text-gray-400">— Alex P.</cite>
+                </blockquote>
+                <blockquote class="bg-gray-800 p-6 rounded-lg">
+                    <p class="mb-2">“Super simple to use and the subtitles are spot on.”</p>
+                    <cite class="text-gray-400">— Maria L.</cite>
+                </blockquote>
+                <blockquote class="bg-gray-800 p-6 rounded-lg">
+                    <p class="mb-2">“I love that I don't need an account to download subtitles.”</p>
+                    <cite class="text-gray-400">— Jamie K.</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-950 text-center py-6 text-gray-400">
+        &copy; 2023 YTText AI
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
