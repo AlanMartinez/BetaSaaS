@@ -3,50 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Subtitle Downloader</title>
+    <title>BetaSaaS</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
- 
-    <header>
-        <h1>Welcome to BetaSaaS</h1>
-        <p>Your next-generation SaaS solution</p>
-        <a href="#signup" class="cta-btn">Get Started</a>
+<body class="bg-gradient-to-b from-slate-900 via-indigo-900 to-purple-900 text-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold">BetaSaaS</a>
+        <nav class="hidden md:flex space-x-8 text-gray-300">
+            <a href="#" class="hover:text-white">Home</a>
+            <a href="#features" class="hover:text-white">Features</a>
+            <a href="#" class="hover:text-white">Pricing</a>
+            <a href="#" class="hover:text-white">Contact</a>
+        </nav>
+        <a href="#" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-md shadow">Get Started</a>
     </header>
-    <section class="features">
-        <div class="feature">
-            <h2>Fast</h2>
-            <p>Lightning-fast performance for your business needs.</p>
-        </div>
-        <div class="feature">
-            <h2>Secure</h2>
-            <p>Top-notch security to keep your data safe.</p>
-        </div>
-        <div class="feature">
-            <h2>Scalable</h2>
-            <p>Grow your business without limits.</p>
-        </div>
-    </section>
-    <section id="subtitles" class="subtitles">
-        <h2>Get YouTube Subtitles</h2>
-        <input type="text" id="youtube-url" placeholder="Enter YouTube URL">
-        <button id="get-subtitles">Get Subtitles</button>
-        <p id="subtitle-message"></p>
-    </section>
-    <section id="signup" class="signup">
-        <h2>Sign Up for Early Access</h2>
-        <form id="signup-form">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Notify Me</button>
 
-          
-          <div class="bg-white max-w-lg w-full p-8 rounded-lg shadow-lg">
-        <h1 class="text-3xl font-bold text-center mb-6">YouTube Subtitle Downloader</h1>
-        <form class="flex flex-col sm:flex-row gap-4">
-            <input type="text" placeholder="Paste YouTube URL" class="flex-1 px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md shadow">Get Subtitles</button>
-        </form>
-    </div>
+    <!-- Hero Section -->
+    <section class="container mx-auto flex-1 px-6 py-20 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">A CRM dashboard for engineering teams</h1>
+        <p class="text-lg text-gray-300 mb-8">Manage your projects, track progress, and collaborate with ease.</p>
+        <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-md shadow">Start for free</a>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container mx-auto px-6 py-20 grid gap-8 md:grid-cols-3">
+        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast</h3>
+            <p class="text-gray-300">Lightning-fast performance for your business needs.</p>
+        </div>
+        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm-2 4c1.105 0 3 .895 3 2v1H7v-1c0-1.105 1.895-2 3-2zm8-9v2m0 4v6m0 4v.01M18 9a2 2 0 110-4 2 2 0 010 4z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Secure</h3>
+            <p class="text-gray-300">Top-notch security to keep your data safe.</p>
+        </div>
+        <div class="rounded-xl bg-white/10 border border-white/20 p-6 backdrop-blur-lg shadow-lg">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-500 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h10a4 4 0 004-4m-9-9v9m0 0L8.5 9M12 15l3.5-6" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Scalable</h3>
+            <p class="text-gray-300">Grow your business without limits.</p>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 text-gray-400">&copy; 2023 BetaSaaS</footer>
 </body>
 </html>
