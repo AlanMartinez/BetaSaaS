@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BetaSaaS - Simple & Elegant Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>YouTube Subtitle Downloader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+ 
     <header>
         <h1>Welcome to BetaSaaS</h1>
         <p>Your next-generation SaaS solution</p>
@@ -37,12 +39,14 @@
         <form id="signup-form">
             <input type="email" placeholder="Enter your email" required>
             <button type="submit">Notify Me</button>
+
+          
+          <div class="bg-white max-w-lg w-full p-8 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center mb-6">YouTube Subtitle Downloader</h1>
+        <form class="flex flex-col sm:flex-row gap-4">
+            <input type="text" placeholder="Paste YouTube URL" class="flex-1 px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md shadow">Get Subtitles</button>
         </form>
-        <p id="form-message"></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 BetaSaaS. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    </div>
 </body>
-</html> 
+</html>
