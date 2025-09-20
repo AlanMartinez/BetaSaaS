@@ -364,9 +364,9 @@ body::after {
   gap: 18px;
 }
 
-.panel h2 {
+.panel h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-size: clamp(2.2rem, 3.5vw, 2.9rem);
   margin: 0;
 }
 
@@ -374,6 +374,45 @@ body::after {
   margin: 0;
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+.support {
+  display: grid;
+  gap: 28px;
+  background: linear-gradient(160deg, rgba(19, 27, 42, 0.72), rgba(9, 12, 21, 0.78));
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(155, 255, 43, 0.14);
+  box-shadow: var(--shadow-soft);
+}
+
+.support-intro {
+  display: grid;
+  gap: 12px;
+  max-width: 620px;
+}
+
+.support-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  margin: 0;
+}
+
+.support-intro p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.support-actions .cta {
+  flex: 1 1 220px;
+  min-height: 56px;
 }
 
 .drop-zone {
@@ -679,6 +718,10 @@ body::after {
   .nav {
     padding: 16px 24px;
   }
+
+  .support {
+    padding: 40px 28px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -709,5 +752,13 @@ body::after {
 
   .workflow {
     grid-template-columns: 1fr;
+  }
+
+  .support {
+    padding: 32px 20px;
+  }
+
+  .support-actions {
+    flex-direction: column;
   }
 }
