@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NeonGIF Studio | Convierte videos en GIFs</title>
+    <title>NeonGIF Studio | GIFs suaves en segundos</title>
     <meta
       name="description"
-      content="Convierte tus videoclips favoritos en GIFs vibrantes desde tu navegador con NeonGIF Studio."
+      content="Convierte tus clips favoritos en GIFs ligeros con una experiencia minimalista y moderna."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,14 +21,14 @@
     <header class="site-header">
       <nav class="nav">
         <a class="brand" href="#inicio" aria-label="NeonGIF Studio">
-          <span class="brand-icon" aria-hidden="true">✦</span>
+          <span class="brand-icon" aria-hidden="true">✷</span>
           <span class="brand-name">NeonGIF Studio</span>
         </a>
         <div class="nav-actions">
-          <a class="link" href="#convertidor">Crear GIF</a>
-          <a class="link" href="#apoyo">Apoyar proyecto</a>
-          <a class="link" href="#flujo">Cómo funciona</a>
-          <a class="cta" href="#convertidor">Comenzar</a>
+          <a class="link" href="#convertidor">Convertir</a>
+          <a class="link" href="#apoyo">Apoyar</a>
+          <a class="link" href="#flujo">Proceso</a>
+          <a class="cta" href="#convertidor">Convertir ahora</a>
         </div>
       </nav>
     </header>
@@ -36,12 +36,11 @@
     <main id="inicio" class="page">
       <section id="convertidor" class="converter">
         <div class="panel">
-          <p class="eyebrow">Convierte. Optimiza. Comparte.</p>
-          <h1>Convierte tu video en un GIF hipnótico</h1>
+          <p class="eyebrow">GIFs suaves al instante</p>
+          <h1>Tus videos, en GIFs listos para compartir</h1>
           <p class="panel-description">
-            Arrastra tu archivo al área o selecciónalo desde tu dispositivo.
-            El botón se activará automáticamente cuando validemos el formato y la
-            duración para que empieces la magia de inmediato.
+            Sube un clip, ajustamos el formato y en segundos tendrás un GIF
+            ligero y optimizado para chats, redes y presentaciones.
           </p>
 
           <div class="drop-zone" id="dropZone" role="button" tabindex="0">
@@ -53,14 +52,14 @@
             />
             <div class="drop-zone-text">
               <span class="icon" aria-hidden="true">⬆</span>
-              <p><strong>Arrastra tu video</strong> o haz clic para elegir</p>
-              <p class="hint">Máximo 120 segundos · Tamaño recomendado &lt; 200MB</p>
+              <p><strong>Suelta tu video</strong> o toca para seleccionar</p>
+              <p class="hint">Hasta 120 segundos · Ideal menor a 200 MB</p>
             </div>
           </div>
 
           <div class="controls">
             <label class="control">
-              <span>Resolución</span>
+              <span>Resolución base</span>
               <span class="control-value">480 px de ancho</span>
             </label>
             <label class="control">
@@ -78,8 +77,8 @@
         <div class="preview" aria-live="polite">
           <div class="preview-card" id="previewCard">
             <p class="placeholder" id="placeholderText">
-              Aquí verás la previsualización de tu GIF cuando la conversión se
-              complete. Mantén abierta la pestaña durante el proceso.
+              Aquí aparecerá la previsualización de tu GIF apenas terminemos la
+              conversión. Quédate en la pestaña y relájate unos segundos.
             </p>
             <img id="gifPreview" alt="GIF generado" hidden />
             <a id="downloadLink" class="cta ghost" href="#" download hidden>
@@ -91,10 +90,10 @@
 
       <section id="apoyo" class="support">
         <div class="support-intro">
-          <h2>Impulsa NeonGIF Studio</h2>
+          <h2>Acompaña a NeonGIF Studio</h2>
           <p>
-            ¿Te gusta convertir clips en GIFs hipnóticos? Tu aporte nos ayuda a
-            mantener el motor actualizado y a sumar nuevas funciones.
+            ¿Te inspira crear GIFs suaves y expresivos? Tu apoyo mantiene vivo el
+            laboratorio pastel y acelera nuevas herramientas.
           </p>
         </div>
         <div class="support-actions" role="group" aria-label="Opciones de donación">
@@ -104,7 +103,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Invítanos un Cafecito
+            Invítanos un cafecito
           </a>
           <a
             class="cta ghost large"
@@ -120,33 +119,33 @@
       <section id="flujo" class="workflow">
         <div class="workflow-card">
           <span class="step">01</span>
-          <h4>Sube tu clip</h4>
+          <h4>Prepara tu clip</h4>
           <p>
-            Selecciona un video en formato compatible. Te avisaremos si supera
-            el límite de 120 segundos para evitar cargas innecesarias.
+            Elige un video compatible, verás al instante si supera el límite de
+            120 segundos para ahorrar tiempo.
           </p>
         </div>
         <div class="workflow-card">
           <span class="step">02</span>
-          <h4>Transformación neon</h4>
+          <h4>Pulimos cada cuadro</h4>
           <p>
-            El motor FFmpeg WASM procesa los fotogramas en tu navegador con
-            ajustes optimizados para GIFs virales.
+            FFmpeg WASM optimiza cada fotograma con ajustes equilibrados para un
+            GIF liviano y atractivo.
           </p>
         </div>
         <div class="workflow-card">
           <span class="step">03</span>
           <h4>Descarga y comparte</h4>
           <p>
-            Previsualiza el resultado, descárgalo y compártelo en tus redes o
-            plataformas de mensajería favoritas.
+            Visualiza el resultado, descarga el archivo y compártelo al instante
+            donde quieras.
           </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> NeonGIF Studio. Crea GIFs brillantes en segundos.</p>
+      <p>© <span id="year"></span> NeonGIF Studio. GIFs delicados en cuestión de segundos.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.4/dist/ffmpeg.min.js" crossorigin="anonymous"></script>
