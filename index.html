@@ -1,77 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YTText AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white flex flex-col min-h-screen">
-    <header class="bg-gray-950">
-        <div class="container mx-auto flex justify-between items-center p-6">
-            <a href="index.html" class="text-2xl font-bold">YTText AI</a>
-            <nav class="space-x-6 hidden md:block">
-                <a href="index.html" class="hover:text-indigo-400">Home</a>
-                <a href="features.html" class="hover:text-indigo-400">Features</a>
-                <a href="pricing.html" class="hover:text-indigo-400">Pricing</a>
-                <a href="about.html" class="hover:text-indigo-400">About</a>
-                <a href="contact.html" class="hover:text-indigo-400">Contact</a>
-            </nav>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonGIF Studio | Convierte videos en GIFs</title>
+    <meta
+      name="description"
+      content="Convierte tus videoclips favoritos en GIFs vibrantes desde tu navegador con NeonGIF Studio."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-grid" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#inicio" aria-label="NeonGIF Studio">
+          <span class="brand-icon" aria-hidden="true">✦</span>
+          <span class="brand-name">NeonGIF Studio</span>
+        </a>
+        <div class="nav-actions">
+          <a class="link" href="#caracteristicas">Características</a>
+          <a class="link" href="#flujo">Cómo funciona</a>
+          <a class="cta" href="#convertidor">Probar ahora</a>
         </div>
+      </nav>
     </header>
 
-    <main class="flex-1">
-        <!-- Hero -->
-        <section class="container mx-auto px-6 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Extract YouTube video subtitles instantly with AI</h1>
-            <p class="text-lg text-gray-300 mb-8">Paste a video link and download subtitles in .txt format</p>
-            <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
-                <input id="youtube-url" type="url" placeholder="https://www.youtube.com/watch?v=..." class="flex-1 rounded-md p-3 text-gray-900" />
-                <button id="get-subtitles" class="bg-indigo-600 hover:bg-indigo-500 rounded-md px-6 py-3">Get Subtitles</button>
+    <main id="inicio" class="page">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Convierte. Optimiza. Comparte.</p>
+          <h1>
+            Dale <span class="highlight">ritmo neon</span> a tus clips y
+            obtén GIFs listos para viralizar.
+          </h1>
+          <p class="hero-description">
+            Sube un video corto, presiona convertir y obtén un GIF liviano sin
+            salir de tu navegador. Todo el procesamiento ocurre en tu equipo,
+            sin colas, sin esperas.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-value">120s</span>
+              <span class="stat-label">Duración máxima por clip</span>
             </div>
-            <p id="subtitle-message" class="mt-4 text-indigo-400"></p>
-        </section>
+            <div class="stat-card">
+              <span class="stat-value">15 FPS</span>
+              <span class="stat-label">Fluidez optimizada para compartir</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">100% local</span>
+              <span class="stat-label">Tus archivos no salen del navegador</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a class="cta large" href="#convertidor">Comenzar conversión</a>
+            <p class="disclaimer">Formatos aceptados: MP4, WEBM, OGG, MOV.</p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb"></div>
+          <div class="card floating">
+            <span class="card-title">Preset Neon</span>
+            <span class="card-value">GIF optimizado · 480px</span>
+            <div class="signal">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="card floating delay">
+            <span class="card-title">Conversión segura</span>
+            <span class="card-value">Procesamiento local</span>
+          </div>
+        </div>
+      </section>
 
-        <!-- Preview Features -->
-        <section class="container mx-auto px-6 py-16 grid gap-8 md:grid-cols-3 text-center">
-            <div class="bg-gray-800 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">AI-powered</h3>
-                <p class="text-gray-300">State of the art transcription for any video.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">Fast Processing</h3>
-                <p class="text-gray-300">Receive your subtitles in seconds.</p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">Download Ready</h3>
-                <p class="text-gray-300">Export subtitles as clean text files.</p>
-            </div>
-        </section>
+      <section id="convertidor" class="converter">
+        <div class="panel">
+          <h2>Convierte tu video en un GIF hipnótico</h2>
+          <p class="panel-description">
+            Arrastra tu archivo al área o selecciónalo desde tu dispositivo.
+            El botón se activará automáticamente cuando validemos el formato y la
+            duración.
+          </p>
 
-        <!-- Testimonials -->
-        <section class="container mx-auto px-6 py-16">
-            <h2 class="text-3xl font-bold text-center mb-8">What users say</h2>
-            <div class="grid gap-8 md:grid-cols-3">
-                <blockquote class="bg-gray-800 p-6 rounded-lg">
-                    <p class="mb-2">“YTText AI saved me hours of manual transcription.”</p>
-                    <cite class="text-gray-400">— Alex P.</cite>
-                </blockquote>
-                <blockquote class="bg-gray-800 p-6 rounded-lg">
-                    <p class="mb-2">“Super simple to use and the subtitles are spot on.”</p>
-                    <cite class="text-gray-400">— Maria L.</cite>
-                </blockquote>
-                <blockquote class="bg-gray-800 p-6 rounded-lg">
-                    <p class="mb-2">“I love that I don't need an account to download subtitles.”</p>
-                    <cite class="text-gray-400">— Jamie K.</cite>
-                </blockquote>
+          <div class="drop-zone" id="dropZone" role="button" tabindex="0">
+            <input
+              type="file"
+              id="videoInput"
+              accept="video/mp4,video/webm,video/ogg,video/quicktime"
+              aria-label="Subir video para convertir a GIF"
+            />
+            <div class="drop-zone-text">
+              <span class="icon" aria-hidden="true">⬆</span>
+              <p><strong>Arrastra tu video</strong> o haz clic para elegir</p>
+              <p class="hint">Máximo 120 segundos · Tamaño recomendado &lt; 200MB</p>
             </div>
-        </section>
+          </div>
+
+          <div class="controls">
+            <label class="control">
+              <span>Resolución</span>
+              <span class="control-value">480 px de ancho</span>
+            </label>
+            <label class="control">
+              <span>Velocidad</span>
+              <span class="control-value">15 fotogramas por segundo</span>
+            </label>
+          </div>
+
+          <button id="convertButton" class="cta full" disabled>
+            Convertir a GIF
+          </button>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="preview" aria-live="polite">
+          <div class="preview-card" id="previewCard">
+            <p class="placeholder" id="placeholderText">
+              Aquí verás la previsualización de tu GIF cuando la conversión se
+              complete. Mantén abierta la pestaña durante el proceso.
+            </p>
+            <img id="gifPreview" alt="GIF generado" hidden />
+            <a id="downloadLink" class="cta ghost" href="#" download hidden>
+              Descargar GIF
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="caracteristicas" class="features">
+        <article class="feature-card">
+          <h3>Flujo guiado</h3>
+          <p>
+            El panel inteligente revisa duración y formato automáticamente, así
+            evitas intentos fallidos desde el inicio.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Colores vibrantes</h3>
+          <p>
+            Aplicamos filtros y un perfil cromático pensado para resaltar en
+            redes sociales sin perder nitidez.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Privacidad total</h3>
+          <p>
+            La conversión se ejecuta en tu dispositivo usando WebAssembly. Tus
+            clips nunca se suben a un servidor externo.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3>Optimización automática</h3>
+          <p>
+            Ajustamos fotogramas y escalado para equilibrar peso del archivo con
+            fluidez visual en cualquier plataforma.
+          </p>
+        </article>
+      </section>
+
+      <section id="flujo" class="workflow">
+        <div class="workflow-card">
+          <span class="step">01</span>
+          <h4>Sube tu clip</h4>
+          <p>
+            Selecciona un video en formato compatible. Te avisaremos si supera
+            el límite de 120 segundos para evitar cargas innecesarias.
+          </p>
+        </div>
+        <div class="workflow-card">
+          <span class="step">02</span>
+          <h4>Transformación neon</h4>
+          <p>
+            El motor FFmpeg WASM procesa los fotogramas en tu navegador con
+            ajustes optimizados para GIFs virales.
+          </p>
+        </div>
+        <div class="workflow-card">
+          <span class="step">03</span>
+          <h4>Descarga y comparte</h4>
+          <p>
+            Previsualiza el resultado, descárgalo y compártelo en tus redes o
+            plataformas de mensajería favoritas.
+          </p>
+        </div>
+      </section>
     </main>
 
-    <footer class="bg-gray-950 text-center py-6 text-gray-400">
-        &copy; 2023 YTText AI
+    <footer class="site-footer">
+      <p>© <span id="year"></span> NeonGIF Studio. Crea GIFs brillantes en segundos.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.4/dist/ffmpeg.min.js" crossorigin="anonymous"></script>
+    <script src="app.js" type="module"></script>
+  </body>
 </html>
