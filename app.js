@@ -5,6 +5,12 @@ const SUPPORTED_TYPES = [
   'video/quicktime',
 ];
 const MAX_DURATION_SECONDS = 120;
+const EXTENSION_BY_MIME = {
+  'video/mp4': '.mp4',
+  'video/webm': '.webm',
+  'video/ogg': '.ogg',
+  'video/quicktime': '.mov',
+};
 
 const dropZone = document.getElementById('dropZone');
 const videoInput = document.getElementById('videoInput');
@@ -112,6 +118,17 @@ function getVideoDuration(file) {
   });
 }
 
+function resolveInputName(file) {
+  const mimeExtension = EXTENSION_BY_MIME[file.type];
+  if (mimeExtension) {
+    return `input-${Date.now()}${mimeExtension}`;
+  }
+
+  const nameMatch = file.name && file.name.match(/(\.[a-zA-Z0-9]{2,5})$/);
+  const fallbackExtension = nameMatch ? nameMatch[1].toLowerCase() : '.mp4';
+  return `input-${Date.now()}${fallbackExtension}`;
+}
+
 async function handleFileSelection(file) {
   if (!file) return;
 
@@ -130,7 +147,7 @@ async function handleFileSelection(file) {
     durationCache = duration;
     const sizeMb = (file.size / 1024 / 1024).toFixed(1);
     setStatus(
-      `Archivo listo · ${formatDuration(duration)} · ${sizeMb} MB`,
+      `Listo: ${file.name} · ${formatDuration(duration)} · ${sizeMb} MB`,
       'success',
     );
     convertButton.disabled = false;
@@ -156,7 +173,7 @@ async function convertToGif() {
   try {
     await ensureFFmpegLoaded();
 
-    inputName = `input${Date.now()}`;
+    inputName = resolveInputName(selectedFile);
 
     ffmpeg.FS('writeFile', inputName, await fetchFile(selectedFile));
 
@@ -256,6 +273,7 @@ videoInput.addEventListener('change', (event) => {
   if (file) {
     handleFileSelection(file);
   }
+  event.target.value = '';
 });
 
 convertButton.addEventListener('click', () => {
